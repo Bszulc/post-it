@@ -1,4 +1,3 @@
-
 @import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -114,7 +113,6 @@ strong { font-weight: bold; }
 
 #mainheader nav a:hover { background-color: #1f89ba; }
 
-/*- Content -*/
 .note {
 	background: white;
 	width:150px;
