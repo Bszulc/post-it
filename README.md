@@ -1,8 +1,5 @@
 to-do
 ====
 
-- external shiv and jQuery source
-- font: Karla (Google fonts)
+- font: Kaushan Script (Google fonts)
 - add a javascript folder and file
-
-- test
