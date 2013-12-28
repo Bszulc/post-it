@@ -114,10 +114,21 @@ strong { font-weight: bold; }
 #mainheader nav a:hover { background-color: #1f89ba; }
 
 .note {
-	background: white;
 	width:150px;
 	height:150px;
 	margin: 10px;
+	border-width: 3px;
+	border-color: #00bbff; /* these won't affect the div until the javacsript sets "border-style"*/
+	
+	/* gradient from http://www.colorzilla.com/gradient-editor/ */
+	background: #ffd282; /* Old browsers */
+	background: -moz-radial-gradient(75% 25%, ellipse cover, #ffd282 0%, #ffe767 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffd282), color-stop(100%,#ffe767)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #ffd282 0%,#ffe767 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #ffd282 0%,#ffe767 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #ffd282 0%,#ffe767 100%); /* IE10+ */
+	background: radial-gradient(ellipse at 65% 75%, #ffd282 0%,#ffe767 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd282', endColorstr='#ffe767',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /*************************/
