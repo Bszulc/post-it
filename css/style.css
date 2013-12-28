@@ -86,6 +86,7 @@ strong { font-weight: bold; }
 	font-size: 2em;
 	list-style: none;
 	text-shadow: 2px 2px 2px #18698e;
+<<<<<<< HEAD
 }
 
 #mainheader nav li { float: left; }
@@ -101,6 +102,28 @@ strong { font-weight: bold; }
 #mainheader nav a:hover { background-color: #1f89ba; }
 
 /*- Content -*/
+=======
+}
+
+#mainheader nav li { float: left; }
+
+#mainheader nav li:first-child { margin-left: 50px; }
+
+#mainheader nav a {
+	padding: 5px 25px 5px 25px;
+	color: white;
+	text-decoration: none;
+}
+
+#mainheader nav a:hover { background-color: #1f89ba; }
+
+/*- Content -*/
+.note {
+	background: white;
+	width:150px;
+	height:150px;
+}
+>>>>>>> f30af4a998e76ccd7dc783a461affd54f85c8549
 
 
 /*************************/
