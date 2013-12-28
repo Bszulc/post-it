@@ -101,6 +101,11 @@ strong { font-weight: bold; }
 #mainheader nav a:hover { background-color: #1f89ba; }
 
 /*- Content -*/
+.note {
+	background: white;
+	width:150px;
+	height:150px;
+}
 
 
 /*************************/
