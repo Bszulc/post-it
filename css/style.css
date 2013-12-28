@@ -86,7 +86,6 @@ strong { font-weight: bold; }
 	font-size: 2em;
 	list-style: none;
 	text-shadow: 2px 2px 2px #18698e;
-<<<<<<< HEAD
 }
 
 #mainheader nav li { float: left; }
@@ -102,8 +101,6 @@ strong { font-weight: bold; }
 #mainheader nav a:hover { background-color: #1f89ba; }
 
 /*- Content -*/
-=======
-}
 
 #mainheader nav li { float: left; }
 
@@ -123,8 +120,6 @@ strong { font-weight: bold; }
 	width:150px;
 	height:150px;
 }
->>>>>>> f30af4a998e76ccd7dc783a461affd54f85c8549
-
 
 /*************************/
 /***** Media Queries *****/
@@ -142,9 +137,7 @@ strong { font-weight: bold; }
 }
 
 @media screen and (max-width: 430px) {
-	#mainheader {
-		padding: 5px;
-	}
+	#mainheader { padding: 5px; }
 
 	#mainheader nav { 
 		width: 95%;
