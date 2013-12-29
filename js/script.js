@@ -1,6 +1,6 @@
 //javascript
 $(document).ready(function(){
-	$(".note").draggable({containment: "document",
+	$(".note").draggable({containment: 'parent',
 	start: function(e, ui) {
 		$(this).css({"border-style": "solid", "border-width" : "2px", "border-color" : "#0096cd"}); //this is where we can put in the CSS that will correspond to a moving post-it (e.g. have the pin floating above the div, rather than tacking it to the board)
 	},
