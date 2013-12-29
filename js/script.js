@@ -9,4 +9,28 @@ $(document).ready(function(){
 	},
 	});
 	$(".note").resizable({maxHeight: 400, maxWidth: 400, minHeight: 150, minWidth: 150, containment: "document" });
+	
+	
+	//This is just to give us an idea of what wecan accomplish. Unfortunatley this plug in allows you to edit the DOM, so clicking the note element in the browser will display the DOMS code. Eventually we need to use PHP
+	//to make this work properly. 
+	$('.note').editable({
+    touch : true, // Whether or not to support touch (default true)
+    lineBreaks : true, // Whether or not to convert \n to <br /> (default true)
+    toggleFontSize : true, // Whether or not it should be possible to change font size (defualt true)
+    closeOnEnter : false, // Whether or not pressing the enter key should close the editor (default false)
+    event : 'click', // The event that triggers the editor
+    callback : function( data ) {
+        // Callback that will be called once the editor looses focus
+        if( data.content ) {
+            // Content has changed...
+        }
+        if( data.fontSize ) {
+            // the font size is changed
+        }
+ 
+        // data.$el gives you a reference to the element that was edited
+        data.$el.effect('blink');
+    }
+});
+	
 });
