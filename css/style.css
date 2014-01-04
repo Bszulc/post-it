@@ -55,6 +55,10 @@ table {
 
 * { box-sizing: border-box; }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-family: "Kaushan Script", cursive;
 	background: url('../img/background.jpg') repeat left top;
@@ -75,7 +79,7 @@ strong { font-weight: bold; }
 
 #main {
 	width: 90%;
-	height: 800px;;
+	height:80%;
 	margin: 0 auto;
 	padding: 15px;
 }
