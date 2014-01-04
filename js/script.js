@@ -9,7 +9,11 @@ $(document).ready(function(){
 	},
 	});
 	$(".note").resizable({maxHeight: 400, maxWidth: 400, minHeight: 150, minWidth: 150, containment: "parent" });
-	
+	//
+	//This allows for us to attach a pin to a note
+$('#main').sortable({connectWith: '.note'});
+$('.note').sortable({connectWith: '.pin'});
+
 	
 	//This is just to give us an idea of what wecan accomplish. Unfortunatley this plug in allows you to edit the DOM, so clicking the note element in the browser will display the DOMS code. Eventually we need to use PHP
 	//to make this work properly. 
