@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+	
 	$(".note")
 		.draggable({
 			containment: 'parent',
@@ -51,5 +52,18 @@ $(document).ready(function(){
 	//This allows for us to attach a pin to a note
 	$('#main').sortable({connectWith: '.note'});
 	$('.note').sortable({connectWith: '.pin'});
+	
+	//button adding a new note
+	$('#addnote').click(function(){
+    	var $newNote=$('<div class="note" ></div>').resizable().draggable().editable().sortable({connectWith: '.pin'});
+    $("#main")
+		.append($newNote);
+ 	 });
+	//button adding a new pin
+		$('#addpin').click(function(){
+    	var $newPin=$('<img class="pin" src="img/pinred.png">').sortable({connectWith: '.note'});
+    $("#main")
+		.append($newPin);
+ 	 });
 	
 });

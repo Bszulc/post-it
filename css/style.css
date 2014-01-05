@@ -116,7 +116,11 @@ strong { font-weight: bold; }
 }
 
 #mainheader nav a:hover { background-color: #1f89ba; }
-
+#icons{
+margin-top:50px;
+margin-left: 75px;
+height:100px;
+}
 .note {
 	width:150px;
 	height:150px;
