@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+	var $main = $('#main');
 	
 	$(".note")
 		.draggable({
@@ -47,23 +48,40 @@ $(document).ready(function(){
         		// data.$el gives you a reference to the element that was edited
         		data.$el.effect('blink');
     		}
+		})
+
+		//This allows for us to attach a pin to a note
+		.sortable({
+			connectWidth: '.pin'
 		});
 
 	//This allows for us to attach a pin to a note
-	$('#main').sortable({connectWith: '.note'});
-	$('.note').sortable({connectWith: '.pin'});
+	$main.sortable({connectWith: '.note'});
 	
 	//button adding a new note
 	$('#addnote').click(function(){
-    	var $newNote=$('<div class="note" ></div>').resizable().draggable().editable().sortable({connectWith: '.pin'});
-    $("#main")
-		.append($newNote);
+    	var $newNote = $('<div class="note" ></div>')
+    				   	 	.resizable()
+    						.draggable()
+    						.editable()
+    						.sortable({connectWith: '.pin'})
+
+    	// adds x to top right of note that deletes a note when clicked
+     	$('<span class="close">X</span>')
+     		.prependTo($newNote)
+     		.click(function() {
+		 		$(this).parent().remove();
+		 	}
+		 );
+    
+    	$main.append($newNote);
  	 });
+	
 	//button adding a new pin
-		$('#addpin').click(function(){
-    	var $newPin=$('<img class="pin" src="img/pinred.png">').sortable({connectWith: '.note'});
-    $("#main")
-		.append($newPin);
- 	 });
+	$('#addpin').click(function(){
+    	var $newPin = $('<img class="pin" src="img/pinred.png">').sortable({connectWith: '.note'});
+    	
+    	$main.append($newPin);
+ 	});
 	
 });
