@@ -30,40 +30,40 @@ $(document).ready(function(){
 	
 		//This is just to give us an idea of what wecan accomplish. Unfortunatley this plug in allows you to edit the DOM, 
 		// so clicking the note element in the browser will display the DOMS code. Eventually we need to use PHP to make this work properly. 
-		.editable({
-		    touch : true, 			// Whether or not to support touch (default true)
-		    lineBreaks : true, 		// Whether or not to convert \n to <br /> (default true)
-		    toggleFontSize : true, 	// Whether or not it should be possible to change font size (defualt true)
-		    closeOnEnter : false, 	// Whether or not pressing the enter key should close the editor (default false)
-		    event : 'click', 		// The event that triggers the editor
-		    callback : function( data ) {
+		//.editable({
+		//    touch : true, 			// Whether or not to support touch (default true)
+		//   lineBreaks : true, 		// Whether or not to convert \n to <br /> (default true)
+		//   toggleFontSize : true, 	// Whether or not it should be possible to change font size (defualt true)
+		//   closeOnEnter : false, 	// Whether or not pressing the enter key should close the editor (default false)
+		//    event : 'click', 		// The event that triggers the editor
+		//    callback : function( data ) {
         		// Callback that will be called once the editor looses focus
-        		if( data.content ) {
+        //		if( data.content ) {
             		// Content has changed...
-        		}
-        		if( data.fontSize ) {
+        	//	}
+        	//	if( data.fontSize ) {
             		// the font size is changed
-        		}
+        	//	}
  
         		// data.$el gives you a reference to the element that was edited
-        		data.$el.effect('blink');
-    		}
-		})
+        	//	data.$el.effect('blink');
+    	//	}
+	//	})
 
 		//This allows for us to attach a pin to a note
 		.sortable({
-			connectWidth: '.pin'
+			connectWith: '.pin'
 		});
 
 	//This allows for us to attach a pin to a note
-	$main.sortable({connectWith: '.note'});
-	
+	$main.sortable({connectWith: '.pinarea'});
+	$('.pinarea').sortable({connectWith: '.pin'});
 	//button adding a new note
 	$('#addnote').click(function(){
-    	var $newNote = $('<div class="note" ></div>')
+    	var $newNote = $('<div class="note"><div class="pinarea"></div><textarea class="txt"></textarea></div>')
     				   	 	.resizable()
     						.draggable()
-    						.editable()
+    					//	.editable()
     						.sortable({connectWith: '.pin'})
 
     	// adds x to top right of note that deletes a note when clicked
@@ -75,6 +75,7 @@ $(document).ready(function(){
 		 );
     
     	$main.append($newNote);
+		$('.pinarea').sortable({connectWith: '.pin'});
  	 });
 	
 	//button adding a new pin
