@@ -166,8 +166,14 @@ textarea{
     background: -ms-radial-gradient(center, ellipse cover, #ffd282 0%,#ffe767 100%); /* IE10+ */
     background: radial-gradient(ellipse at 65% 75%, #ffd282 0%,#ffe767 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd282', endColorstr='#ffe767',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-box-shadow: 0 10px 5px #373416;
+  -moz-box-shadow: 0 10px 5px #373416;
+  box-shadow: 0 10px 5px #373416;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
 }
-
 
 
 /*************************/
