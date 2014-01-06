@@ -58,9 +58,10 @@ $(document).ready(function(){
 	//This allows for us to attach a pin to a note
 	$main.sortable({connectWith: '.pinarea'});
 	$('.pinarea').sortable({connectWith: '.pin'});
+
 	//button adding a new note
 	$('#addnote').click(function(){
-    	var $newNote = $('<div class="note"><div class="pinarea"></div><textarea class="txt"></textarea></div>')
+    	var newNote = $('<div class="note"><div class="pinarea"></div><textarea class="txt"></textarea></div>')
     				   	 	.resizable()
     						.draggable()
     					//	.editable()
@@ -68,21 +69,23 @@ $(document).ready(function(){
 
     	// adds x to top right of note that deletes a note when clicked
      	$('<span class="close">X</span>')
-     		.prependTo($newNote)
+     		.prependTo(newNote)
      		.click(function() {
 		 		$(this).parent().remove();
 		 	}
 		 );
     
-    	$main.append($newNote);
+    	$main.append(newNote);
 		$('.pinarea').sortable({connectWith: '.pin'});
  	 });
 	
 	//button adding a new pin
 	$('#addpin').click(function(){
-    	var $newPin = $('<img class="pin" src="img/pinred.png">').sortable({connectWith: '.note'});
+		var pinColor = ['pinred.png', 'pinblue.png', 'pingreen.png'],
+		    randomColor = pinColor[Math.floor(Math.random() * pinColor.length)],
+    	 	newPin = $('<img class="pin" src="img/' + randomColor + '">').sortable({connectWith: '.note'});
     	
-    	$main.append($newPin);
+    	$main.append(newPin);
  	});
 	
 });
